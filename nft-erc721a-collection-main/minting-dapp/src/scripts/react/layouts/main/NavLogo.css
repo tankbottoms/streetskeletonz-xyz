@@ -1,0 +1,115 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap");
+
+.Hero-section{
+  position:relative;
+  z-index:36;
+  pointer-events:none;
+  opacity:0.9900000095367432;
+  margin-left:89px;
+  width:1749px;
+  min-width:1749px;
+  height:970px;
+  margin-top:33px;
+  margin-bottom:5811px;
+  min-height:970px;
+}
+.Hero-section-outer{
+  pointer-events:none;
+  z-index:36;
+  position:relative;
+  display:flex;
+}
+.Frame-58{
+  position:relative;
+  z-index:37;
+  pointer-events:none;
+  margin-left:0px;
+  width:1749px;
+  min-width:1749px;
+  height:87px;
+  margin-top:0px;
+  margin-bottom:883px;
+  min-height:87px;
+}
+.Frame-58-outer{
+  pointer-events:none;
+  z-index:37;
+  position:relative;
+  display:flex;
+}
+.Frame-57{
+  position:relative;
+  z-index:38;
+  pointer-events:none;
+  margin-left:0px;
+  width:646px;
+  min-width:646px;
+  height:87px;
+  margin-top:0px;
+  margin-bottom:0px;
+  min-height:87px;
+}
+.Frame-57-outer{
+  pointer-events:none;
+  z-index:38;
+  position:relative;
+  display:flex;
+}
+.logo-1{
+  position:relative;
+  z-index:39;
+  pointer-events:none;
+  margin-left:0px;
+  width:77px;
+  max-width:77px;
+  min-width:77px;
+  margin-top:0px;
+  margin-bottom:0px;
+  content:url(assets/images/logo__5__1.png);
+  margin-right:10px;
+}
+.logo-1-outer{
+    padding-top: 27px;
+    vertical-align: -18px;
+    pointer-events: none;
+    height: calc(82px + 28px);
+    z-index: 39;
+    position: relative;
+    display: inline-block;
+}
+.THE-MINERS-SUPPLY-CO-1{
+  position:relative;
+  z-index:40;
+  pointer-events:none;
+  text-align:left;
+  color:rgba(0, 0, 0, 1);
+  font-style:normal;
+  font-family:Poppins;
+  font-weight:900;
+  font-size:28px;
+  letter-spacing:1.2px;
+}
+.THE-MINERS-SUPPLY-CO-1-outer{
+  pointer-events:none;
+  z-index:40;
+  display:inline-block;
+}
+.Frame-1{
+  position:relative;
+  z-index:42;
+  pointer-events:none;
+  margin-left:780px;
+  width:783px;
+  min-width:783px;
+  height:36px;
+  margin-top:-62px;
+  margin-bottom:26px;
+  min-height:36px;
+}
+.Frame-1-outer{
+  pointer-events:none;
+  z-index:42;
+  position:relative;
+  display:flex;
+}
