@@ -19,7 +19,8 @@ import Slider from "react-slick";
 import { Box, Stack, Container, Typography, Hidden } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import DevTeam from "./DevTeam";
+import { memo } from "react";
+import DevTeam from "./DevTeam";
 
 
 const ContractAbi = require('../../../../smart-contract/artifacts/contracts/' + CollectionConfig.contractName + '.sol/' + CollectionConfig.contractName + '.json').abi;
@@ -80,9 +81,9 @@ export default class Dapp extends React.Component<Props, State> {
   }
 
   componentDidMount = async () => {
-    localStorage.clear();
+    // localStorage.clear();
     // Update the default state with a generic URL before we know the actual network through the connected wallet
-    defaultState.etherscanUrl = this.generateEtherscanUrl();
+    // defaultState.etherscanUrl = this.generateEtherscanUrl();
   }
 
   async mintTokens(amount: number, names: any[]): Promise<void>
@@ -257,12 +258,7 @@ export default class Dapp extends React.Component<Props, State> {
 
     return `https://${subdomain}.opensea.io/` + (CollectionConfig.openSeaSlug ? 'collection/' + CollectionConfig.openSeaSlug : null);
   }
-  private selectTeamMember(member: number): void
-  {
-    this.setState({
-      selectedTeamMember: member 
-    }); 
-  }
+
 private ConnectButton() {
   let web3Modal : any;
   let address;
@@ -311,83 +307,86 @@ private ConnectButton() {
 }) as typeof Button;
  
 
-  const sliderSettings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    initialSlide: 0,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          initialSlide: 0
-          // infinite: true
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 0
-          // infinite: true
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 550,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  };
-  const Teams = [
+//   const sliderSettings = {
+//     dots: false,
+//     infinite: false,
+//     speed: 500,
+//     slidesToShow: 5,
+//     slidesToScroll: 5,
+//     initialSlide: 0,
+//     arrows: true,
+//     responsive: [
+//       {
+//         breakpoint: 1424,
+//         settings: {
+//           slidesToShow: 4,
+//           slidesToScroll: 1,
+//           initialSlide: 0
+//           // infinite: true
+//         }
+//       },
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 3,
+//           slidesToScroll: 1,
+//           initialSlide: 0
+//           // infinite: true
+//         }
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 2
+//         }
+//       },
+//       {
+//         breakpoint: 550,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1
+//         }
+//       }
+//     ]
+//   };
+//   const Teams = [
   
-    {
-      name: "Rice Cracker",
-      role: "Boss",
-      description: `World traveler since birth, landed in web3 to help build solid stuff, now inhabiting the PNW with my wife and
-four groms.`,
-      twitter: `https://twitter.com/ricescracker`
-    },
-    {
-      name: "Tankbottoms",
-      role: "Dev",
-      description: `"tank bottoms are the new tank tops"`,
-      twitter: `https://twitter.com/tankbottoms_xyz`
-    },
-    {
-      name: "Cerezo",
-      role: "Artist",
-      description: "Graffiti artist, art toy creator and an illustrator.",
-      twitter: `https://twitter.com/ceresomonky`
-    },
-    {
-      name: "Papitosur4",
-      role: "Project Director",
-      description: "Web2 latin artist web3 Merch and content creator, project promoter/relationship manager.",
-      twitter: `https://mobile.twitter.com/papitosur4`
-    },
-    {
-      name: "Freddy Montero",
-      role: "Ambassador",
-      description: "16 years a pro athlete in South America, North America, Europe and Asia now looking forward to be that link to connect great people into web3 project.",
-      twitter: `https://twitter.com/_fredymontero`
-    }
-  ];
+//     {
+//       name: "Rice Cracker",
+//       role: "Boss",
+//       description: `World traveler since birth, landed in web3 to help build solid stuff, now inhabiting the PNW with my wife and
+// four groms.`,
+//       twitter: `https://twitter.com/ricescracker`
+//     },
+//     {
+//       name: "Tankbottoms",
+//       role: "Dev",
+//       description: `"tank bottoms are the new tank tops"`,
+//       twitter: `https://twitter.com/tankbottoms_xyz`
+//     },
+//     {
+//       name: "Cerezo",
+//       role: "Artist",
+//       description: "Graffiti artist, art toy creator and an illustrator.",
+//       twitter: `https://twitter.com/ceresomonky`
+//     },
+//     {
+//       name: "Papitosur4",
+//       role: "Project Director",
+//       description: "Web2 latin artist web3 Merch and content creator, project promoter/relationship manager.",
+//       twitter: `https://mobile.twitter.com/papitosur4`
+//     },
+//     {
+//       name: "Freddy Montero",
+//       role: "Ambassador",
+//       description: "16 years a pro athlete in South America, North America, Europe and Asia now looking forward to be that link to connect great people into web3 project.",
+//       twitter: `https://twitter.com/_fredymontero`
+//     }
+//   ];
+  const CustomButtonMemoized = React.memo(function CustomButtonMemoized() {
+    return <CustomButton  variant="contained" href="https://www.premint.xyz/street-skeletonz-collective/" target="_blank"><img style={{width:'100px', display:'inline-block', marginLeft:'auto !important', marginRight:'auto !important'}} src="/build/images/premint.svg" alt="PreMint XYZ Logo" /></CustomButton>;
+  });
   return (
     <>
     {/*Header section*/}
@@ -400,11 +399,12 @@ four groms.`,
           fontFamily:'PoppinsBold'
         }}>Street Skeletonz</h1>
     <p style={{textAlign:'left', fontFamily:'PoppinsThin', fontWeight:'bold'}}>
-      The Street Skeletonz 💀 Collective (SSC) is a collection of 5555 hand-crafted Skeletonz, each uniquely undead digital collectible forever verifiable on the Ethereum blockchain.  Street Skeletonz represents street artists and will be a platform to showcase many different talented urban artists from around the world. SSC genesis art by Cerezo Monky from the streets of Medellin, Colombia to Web3. Skeletonz represents Street art foray into leveraging NFTs as a means to fund further large scale graffiti efforts, as well as sustenance.  No promises as to roadmap, but proceeds from the collection will directly fund the transition from urban to on-chain artwork. Individuals who participate in the genesis collection will enjoy early access in all subsequent activities from gaming, bi-weekly raffles, merchandise to future drops. Stop by our discord and get to know the team and all the utility.
+      The Street Skeletonz 💀 Collective (SSC) is a collection of 5555 hand-crafted Skeletonz, each uniquely undead digital collectible forever verifiable on the Ethereum blockchain. The Street Collective represents street artists and will be a platform to showcase many different talented urban artists from around the world. Genesis art by Cerezo Monky from the streets of Medellin, Colombia to Web3. SC represents Street art foray into leveraging NFTs as a means to fund further large scale graffiti efforts, as well as sustenance.  No promises as to roadmap, but proceeds from the collection will directly fund the transition from urban to on-chain artwork. Individuals who participate in the genesis collection will enjoy early access in all subsequent activities from gaming, bi-weekly raffles, merchandise, future drops. Stop by our discord and get to know the team and all the utility.
     </p>
       <div style={{width:'250px', textAlign:'center',marginLeft:'auto',marginRight:'auto',marginTop:'1.5rem'}}>
       <p style={{fontFamily:'PoppinsThin'}}>Secure Your Spot Today</p>
 
+      <CustomButtonMemoized />
       <CustomButton  variant="contained" href="https://www.premint.xyz/street-skeletonz-collective/" target="_blank"><img style={{width:'100px', display:'inline-block', marginLeft:'auto !important', marginRight:'auto !important'}} src="/build/images/premint.svg" alt="PreMint XYZ Logo" /></CustomButton>
       <div className="socialLinks2">
         <ul> 
@@ -442,98 +442,7 @@ four groms.`,
       <p>{address}</p>
       
     </div>
-    {/*Team section*/}
-    <div id="teamSection"
-            >
-            <h1 style={{
-              textTransform: 'uppercase',
-              fontSize: '50px',
-              fontWeight: 'bold',
-              textAlign: 'left',
-              fontFamily:'PoppinsBold',
-              color:'#fff'
-            }}>THE TEAM</h1>
-            
-             <div style={{position:'relative', padding:'10px'}}>
-              <Box sx={{ width: 1 }}>
-                <Slider {...sliderSettings}>
-                  {Teams.map((item, index) => (
-                    <div 
-                      className="teamMember" 
-                      style={{display:'inline-block'}} 
-                      onMouseEnter={() => this.selectTeamMember(index)} 
-                      onTouchStart={() => this.selectTeamMember(index)} 
-                      onClick={() => this.selectTeamMember(index)}
-                    >
-                    <Box key={index} sx={{ px: { lg: 2, xs: 1 } }}>
-                      <Stack sx={{ position: "relative" }}>
-                        <Box  
-                          sx={{ 
-                            objectFit: "contain",
-                            height: "230px",
-                            boxSizing: 'border-box',
-                            transition: 'padding 0.3s ease-out, filter 0.2s ease-out',
-                            border: this.state.selectedTeamMember === index ? "2px solid #FDFDFD" : "none",
-                            padding: this.state.selectedTeamMember === index ? "8px" : "none" ,
-                            filter: this.state.selectedTeamMember === index ? "saturate(1) brightness(1)" : "saturate(0.3) brightness(0.8)" 
-                          }}  
-                          component="img" 
-                          src={'/build/images/'+item.name+'.jpg'} />
-                        <Box sx={{ p: 3}}>
-                          <h6 style={{ textTransform: "uppercase", textAlign:'center', color:'#fff' }}>
-                            {item.name}
-                          </h6>
-                          <Typography 
-                            sx={{ 
-                              fontSize: "24px !important", 
-                              fontFamily:'poppins', 
-                              textAlign:'center' 
-                            }}>
-                            {item.role}
-                          </Typography>
-                          
-                          <a href={item.twitter} target="_blank" style={{width: '30px',margin: 'auto',  marginTop:'5px'}}>
-                            <img  style={{
-                              width: '30px',
-                              margin: 'auto',
-                              transition: 'opacity 0.3s ease-out',
-                              opacity: this.state.selectedTeamMember === index ? "1" : "0.6" ,
-                            }} src="/build/images/twitter.svg" alt="Twitter Logo" />
-                          </a>
-                        </Box>
-                      </Stack>
-                    </Box>
-                    </div>
-                  ))}
-              </Slider>
-              {this.state.selectedTeamMember == 0 ? 
-                <p  id="num0Team" style={{ textAlign:'center', color:'#fff',minHeight:'300px' }}>
-                  {Teams[0].description}
-                </p> 
-              : null}
-              {this.state.selectedTeamMember == 1 ? 
-                <p  id="num2Team"  style={{ textAlign:'center', color:'#fff',minHeight:'300px' }}>
-                  {Teams[1].description}
-                </p> 
-              : null}
-              {this.state.selectedTeamMember == 2 ? 
-                <p id="num3Team"   style={{ textAlign:'center', color:'#fff',minHeight:'300px' }}>
-                  {Teams[2].description}
-                </p> 
-              : null}
-              {this.state.selectedTeamMember == 3 ? 
-                <p id="num4Team"   style={{ textAlign:'center', color:'#fff',minHeight:'300px' }}>
-                  {Teams[3].description}
-                </p> 
-              : null}
-              {this.state.selectedTeamMember == 4 ? 
-                <p id="num5Team"   style={{ textAlign:'center', color:'#fff',minHeight:'300px' }}>
-                  {Teams[4].description}
-                </p> 
-              : null}
-              </Box>
-            </div>
-      </div>
+    <DevTeam />
       </>
   )
 }
