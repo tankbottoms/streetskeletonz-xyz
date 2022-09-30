@@ -366,7 +366,7 @@ four groms.`,
     {
       name: "Tankbottoms",
       role: "Dev",
-      description: `"tank bottoms are the new tank tops`,
+      description: `"tank bottoms are the new tank tops"`,
       twitter: `https://twitter.com/tankbottoms_xyz`
     },
     {
