@@ -366,7 +366,7 @@ four groms.`,
     {
       name: "Tankbottoms",
       role: "Dev",
-      description: `"Tank bottoms are the new tank tops." Motto aside, they have been involved in crypto since using Bitcoin to buy LSD on Silk Road. Previously, Tankbottoms has worked on cryptography when it was supremely uncool - Digital Audio Digital Rights Management, circa. 1999, Napster vs. shopping mall CD music retailers, RIAA vs. Rio Digital Audio Player, and the entire Music Labels'  existential crisis in which inventing time travel to alter using PCM imprinting audio on CDs would have been more successful than ala cart music singles with DRM dictating both copy counts and playback devices.  Tankbottoms contributes to SSC as its Solidity Web3 Intern from daolabs.wtf and token Proof member constantly reminding SSC to do something, "the same but different".  In their spare time, Tankbottoms likes long walks on the beach, juicebox.wtf, pushing mint as fast as possible on mint.fun, and when he isn't sleeping or doing the above, he is working on creator tools in hopes to help creators and traditional entities migrate to web3.`,
+      description: `"tank bottoms are the new tank tops`,
       twitter: `https://twitter.com/tankbottoms_xyz`
     },
     {
