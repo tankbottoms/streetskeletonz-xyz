@@ -405,7 +405,7 @@ private ConnectButton() {
       <p style={{fontFamily:'PoppinsThin'}}>Secure Your Spot Today</p>
 
       <CustomButtonMemoized />
-      <CustomButton  variant="contained" href="https://www.premint.xyz/street-skeletonz-collective/" target="_blank"><img style={{width:'100px', display:'inline-block', marginLeft:'auto !important', marginRight:'auto !important'}} src="/build/images/premint.svg" alt="PreMint XYZ Logo" /></CustomButton>
+      
       <div className="socialLinks2">
         <ul> 
            <li>
