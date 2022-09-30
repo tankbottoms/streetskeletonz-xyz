@@ -115,7 +115,7 @@ four groms.`,
     return (
     <>
     {/*Team section*/}
-    <div id="teamSection">
+    <div id="teamSection" style={{minWidth:'100.5vw'}}>
             <h1 style={{
               textTransform: 'uppercase',
               fontSize: '50px',
