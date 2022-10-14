@@ -399,8 +399,8 @@ private ConnectButton() {
           fontFamily:'PoppinsBold'
         }}>Street Skeletonz</h1>
     <p style={{textAlign:'left', fontFamily:'PoppinsThin', fontWeight:'bold'}}>
-      The Street Skeletonz 💀 Collective (SSC) is a collection of 5555 hand-crafted Skeletonz, each uniquely undead digital collectible forever verifiable on the Ethereum blockchain. The Street Collective represents street artists and will be a platform to showcase many different talented urban artists from around the world. Genesis art by Cerezo Monky from the streets of Medellin, Colombia to Web3. SC represents Street art foray into leveraging NFTs as a means to fund further large scale graffiti efforts, as well as sustenance.  No promises as to roadmap, but proceeds from the collection will directly fund the transition from urban to on-chain artwork. Individuals who participate in the genesis collection will enjoy early access in all subsequent activities from gaming, bi-weekly raffles, merchandise, future drops. Stop by our discord and get to know the team and all the utility.
-    </p>
+      The Street Skeletonz 💀 is a collection of 5555 hand-crafted Skeletonz, each uniquely undead digital collectible forever verifiable on the Ethereum blockchain. The Street Collective (SC) represents street artists and will be a platform to showcase many different talented urban artists from around the world. Genesis art by an artist from the streets of Medellin, Colombia to Web3. SC represents Street art foray into leveraging NFTs as a means to fund further large scale graffiti efforts, as well as sustenance. No promises as to roadmap, but proceeds from the collection will directly fund the transition from urban to on-chain artwork. Individuals who participate in the genesis collection will enjoy early access in all subsequent activities from gaming, bi-weekly raffles, merchandise, future drops. Stop by our discord and get to know the team and all the utility.
+     </p>
       <div style={{width:'250px', textAlign:'center',marginLeft:'auto',marginRight:'auto',marginTop:'1.5rem'}}>
       <p style={{fontFamily:'PoppinsThin'}}>Secure Your Spot Today</p>
 

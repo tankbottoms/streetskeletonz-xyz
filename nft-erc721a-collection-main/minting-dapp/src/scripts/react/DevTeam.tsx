@@ -108,7 +108,7 @@ four groms.`,
     {
       name: "Freddy Montero",
       role: "Ambassador",
-      description: "16 years a pro athlete in South America, North America, Europe and Asia now looking forward to be that link to connect great people into web3 project.",
+      description: "16 years as a Pro soccer player and counting Also I am a crypto & NFT’s enthusiast, I love learning about all the new DeFi protocols and new crypto mechanics every day. A community participant, including volunteering my time to a number of DAO governance protocols.",
       twitter: `https://twitter.com/_fredymontero`
     }
   ];
