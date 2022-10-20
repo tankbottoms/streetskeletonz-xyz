@@ -94,12 +94,6 @@ four groms.`,
       twitter: `https://twitter.com/tankbottoms_xyz`
     },
     {
-      name: "Cerezo",
-      role: "Artist",
-      description: "Graffiti artist, art toy creator and an illustrator.",
-      twitter: `https://twitter.com/ceresomonky`
-    },
-    {
       name: "Papitosur4",
       role: "Project Director",
       description: "Web2 latin artist web3 Merch and content creator, project promoter/relationship manager.",
