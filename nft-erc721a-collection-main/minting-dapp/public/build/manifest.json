@@ -1,6 +1,7 @@
 {
   "build/main.css": "/build/main.css",
   "build/main.js": "/build/main.js",
+  "build/images/index.zip": "/build/images/index.zip",
   "build/images/background.webp": "/build/images/background.webp",
   "build/images/fav.jpg": "/build/images/fav.jpg",
   "build/images/header.jpg": "/build/images/header.jpg",
